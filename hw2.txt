@@ -1,0 +1,21 @@
+My github link for part C: https://github.com/quentinchen727/hw2_partC.git
+
+1. Command to configure the remote:
+git remote add origin  https://github.com/quentinchen727/hw2_partC.git          
+If it is git cloned from remote, the output of git remote -v will be:
+remote/origin   https://github.com/quentinchen727/hw2_partC.git (fetch) 
+remote/origin   https://github.com/quentinchen727/hw2_partC.git (push) 
+
+2. After running git fetch origin, there is nothing in the local working diretory, because anything from remote is not merged automatically.
+git merge origin/master master // to merge the latest change from remote.
+
+Run "git branch -a -r" to show all the branches.
+What is a bare repository?
+A bare repository is repo created with "git init --bare". They are stuctured a bit differently form working directories. First, they contain no source files. Second, it stores git revision history of your repo in the root folder of your repo instead of in a .git subfolder. It is mainly used for sharing.
+
+Briefly discuss remote-tracking branches and their relevance.
+Remote branchname keeps a copy of the corresponding remote branches. If there is any conflict between remote branches and local branches, the remote tracking branch provides a flexible option to check the diff between remote and local, then base on the result, you can make an more informed decision compared to blindly git pull.
+
+Push change on another branch:
+git push  -u remote_name local_branch //This will create a corresponding remote branch.
+
